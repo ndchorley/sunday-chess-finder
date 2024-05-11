@@ -12,12 +12,8 @@ public class Main {
     }
 
     public static void findSundayChessEvents(String calendarFile, OutputWriter outputWriter) {
-        List<Event> events = extractEventsFrom(calendarFile);
-
-        events.forEach(event -> {
-           outputWriter.writeLine(event.name());
-           outputWriter.writeLine("");
-        });
+        extractEventsFrom(calendarFile)
+                .forEach(event -> display(event, outputWriter));
     }
 
     private static List<Event> extractEventsFrom(String calendarFile) {
@@ -49,5 +45,10 @@ public class Main {
                         .getText();
 
         return new Event(name);
+    }
+
+    private static void display(Event event, OutputWriter outputWriter) {
+        outputWriter.writeLine(event.name());
+        outputWriter.writeLine("");
     }
 }
