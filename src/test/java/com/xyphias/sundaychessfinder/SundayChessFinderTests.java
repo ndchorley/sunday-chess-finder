@@ -16,17 +16,17 @@ public class SundayChessFinderTests {
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
                         """                                
-                                Muswell Hill FIDE Chess 2024
-                                
-                                London Rapidplay
-                                
-                                June Weekday Chess
-                                
-                                Wembley Sunday Rapidplay
-                                
-                                July Weekend Chess
-                                
-                                """
+                         Muswell Hill FIDE Chess 2024
+                         
+                         London Rapidplay
+                         
+                         June Weekday Chess
+                         
+                         Wembley Sunday Rapidplay
+                         
+                         July Weekend Chess
+                         
+                         """
                 );
 
     }
