@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<icalendar
+        xmlns="urn:ietf:params:xml:ns:icalendar-2.0"><!-- created 20240511T092753Z using kigkonsult.se iCalcreator 2.26.9 iCal2XMl (rfc6321) -->
+    <vcalendar>
+        <properties>
+            <version>
+                <text>2.0</text>
+            </version>
+            <prodid>
+                <text>-////NONSGML kigkonsult.se iCalcreator 2.26.9//</text>
+            </prodid>
+            <calscale>
+                <text>GREGORIAN</text>
+            </calscale>
+            <method>
+                <text>PUBLISH</text>
+            </method>
+            <x-wr-calname>
+                <unknown>ECF Event Calendar</unknown>
+            </x-wr-calname>
+            <x-from-url>
+                <unknown>https://events.timely.fun/urljvbf8</unknown>
+            </x-from-url>
+            <x-wr-timezone>
+                <unknown>Europe/London</unknown>
+            </x-wr-timezone>
+        </properties>
+        <components>
+            <vtimezone>
+                <properties>
+                    <tzid>
+                        <text>Europe/London</text>
+                    </tzid>
+                    <x-lic-location>
+                        <unknown>Europe/London</unknown>
+                    </x-lic-location>
+                </properties>
+                <standard>
+                    <properties>
+                        <dtstart>
+                            <date-time>2023-10-29T02:00:00</date-time>
+                        </dtstart>
+                        <rdate>
+                            <date-time>2024-10-27T02:00:00</date-time>
+                            <date-time>2025-10-26T02:00:00</date-time>
+                        </rdate>
+                        <tzname>
+                            <text>GMT</text>
+                        </tzname>
+                        <tzoffsetfrom>
+                            <utc-offset>+01:00</utc-offset>
+                        </tzoffsetfrom>
+                        <tzoffsetto>
+                            <utc-offset>+00:00</utc-offset>
+                        </tzoffsetto>
+                    </properties>
+                </standard>
+                <daylight>
+                    <properties>
+                        <dtstart>
+                            <date-time>2024-03-31T01:00:00</date-time>
+                        </dtstart>
+                        <rdate>
+                            <date-time>2025-03-30T01:00:00</date-time>
+                        </rdate>
+                        <tzname>
+                            <text>BST</text>
+                        </tzname>
+                        <tzoffsetfrom>
+                            <utc-offset>+00:00</utc-offset>
+                        </tzoffsetfrom>
+                        <tzoffsetto>
+                            <utc-offset>+01:00</utc-offset>
+                        </tzoffsetto>
+                    </properties>
+                </daylight>
+            </vtimezone>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>Muswell Hill FIDE Chess 2024</text>
+                    </summary>
+                    <dtstart>
+                        <date-time>2024-05-10T10:30:00</date-time>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <url>
+                        <uri>https://muswell-hill-chess.com</uri>
+                    </url>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>London Rapidplay</text>
+                    </summary>
+                    <dtstart>
+                        <date-time>2024-05-12T10:30:00</date-time>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <url>
+                        <uri>https://london-rapidplay.com</uri>
+                    </url>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>June Weekday Chess</text>
+                    </summary>
+                    <dtstart>
+                        <date-time>2024-06-04T10:30:00</date-time>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <url>
+                        <uri>https://june-weekday-chess.com</uri>
+                    </url>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>Wembley Sunday Rapidplay</text>
+                    </summary>
+                    <dtstart>
+                        <date-time>2024-06-09T10:30:00</date-time>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <url>
+                        <uri>https://wembley-sunday-rapidplay.co.uk</uri>
+                    </url>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>July Weekend Chess</text>
+                    </summary>
+                    <dtstart>
+                        <date-time>2024-07-07T10:30:00</date-time>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <url>
+                        <uri>https://july-weekend-chess.co.uk</uri>
+                    </url>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+        </components>
+    </vcalendar>
+</icalendar>
