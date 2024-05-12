@@ -30,14 +30,8 @@ public class XmlExtractor {
     }
 
     private static Event toEvent(Element eventElement) {
-        String name =
-                eventElement
-                        .element("properties")
-                        .element("summary")
-                        .element("text")
-                        .getText();
-
-
+        String name = extractName(eventElement);
+        
         String startDateTimeText =
                 eventElement
                         .element("properties")
@@ -50,5 +44,13 @@ public class XmlExtractor {
                         .toLocalDate();
 
         return new Event(name, startDate);
+    }
+
+    private static String extractName(Element eventElement) {
+        return eventElement
+                .element("properties")
+                .element("summary")
+                .element("text")
+                .getText();
     }
 }
