@@ -18,13 +18,13 @@ public class Main {
     }
 
     private static void display(Event event, OutputWriter outputWriter) {
-        outputWriter.writeLine(formatAsDayAndMonth(event.startDate()));
+        outputWriter.writeLine(formatAsDayAndMonth(event.date()));
         outputWriter.writeLine("");
         outputWriter.writeLine(event.name());
         outputWriter.writeLine("");
     }
 
-    private static String formatAsDayAndMonth(LocalDate startDate) {
-        return startDate.format(DateTimeFormatter.ofPattern("d MMMM"));
+    private static String formatAsDayAndMonth(LocalDate date) {
+        return date.format(DateTimeFormatter.ofPattern("d MMMM"));
     }
 }

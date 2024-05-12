@@ -32,12 +32,12 @@ public class XmlExtractor {
     private static Event toEvent(Element eventElement) {
         String name = extractName(eventElement);
 
-        LocalDate startDate = extractStartDate(eventElement);
+        LocalDate date = extractDate(eventElement);
 
-        return new Event(name, startDate);
+        return new Event(name, date);
     }
 
-    private static LocalDate extractStartDate(Element eventElement) {
+    private static LocalDate extractDate(Element eventElement) {
         String startDateTimeText =
                 eventElement
                         .element("properties")
@@ -45,11 +45,12 @@ public class XmlExtractor {
                         .element("date-time")
                         .getText();
 
-        LocalDate startDate =
+        LocalDate date =
                 LocalDateTime
                         .parse(startDateTimeText)
                         .toLocalDate();
-        return startDate;
+
+        return date;
     }
 
     private static String extractName(Element eventElement) {
