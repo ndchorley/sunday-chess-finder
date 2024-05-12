@@ -31,19 +31,25 @@ public class XmlExtractor {
 
     private static Event toEvent(Element eventElement) {
         String name = extractName(eventElement);
-        
+
+        LocalDate startDate = extractStartDate(eventElement);
+
+        return new Event(name, startDate);
+    }
+
+    private static LocalDate extractStartDate(Element eventElement) {
         String startDateTimeText =
                 eventElement
                         .element("properties")
                         .element("dtstart")
                         .element("date-time")
                         .getText();
+
         LocalDate startDate =
                 LocalDateTime
                         .parse(startDateTimeText)
                         .toLocalDate();
-
-        return new Event(name, startDate);
+        return startDate;
     }
 
     private static String extractName(Element eventElement) {
