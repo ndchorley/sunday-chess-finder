@@ -19,22 +19,27 @@ public class SundayChessFinderTests {
                          10 May
                          
                          Muswell Hill FIDE Chess 2024
+                         https://muswell-hill-chess.com
                          
                          12 May
                          
                          London Rapidplay
+                         https://london-rapidplay.com
                          
                          4 June
                          
                          June Weekday Chess
+                         https://june-weekday-chess.com
                          
                          9 June
                          
                          Wembley Sunday Rapidplay
+                         https://wembley-sunday-rapidplay.co.uk
                          
                          7 July
                          
                          July Weekend Chess
+                         https://july-weekend-chess.co.uk
                          
                          """
                 );

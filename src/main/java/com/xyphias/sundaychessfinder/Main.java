@@ -21,6 +21,7 @@ public class Main {
         outputWriter.writeLine(formatAsDayAndMonth(event.date()));
         outputWriter.writeLine("");
         outputWriter.writeLine(event.name());
+        outputWriter.writeLine(event.url().toString());
         outputWriter.writeLine("");
     }
 
