@@ -4,6 +4,8 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class XmlExtractor {
@@ -35,6 +37,18 @@ public class XmlExtractor {
                         .element("text")
                         .getText();
 
-        return new Event(name);
+
+        String startDateTimeText =
+                eventElement
+                        .element("properties")
+                        .element("dtstart")
+                        .element("date-time")
+                        .getText();
+        LocalDate startDate =
+                LocalDateTime
+                        .parse(startDateTimeText)
+                        .toLocalDate();
+
+        return new Event(name, startDate);
     }
 }

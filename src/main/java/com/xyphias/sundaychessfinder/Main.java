@@ -1,5 +1,8 @@
 package com.xyphias.sundaychessfinder;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import static com.xyphias.sundaychessfinder.XmlExtractor.*;
 
 public class Main {
@@ -13,7 +16,13 @@ public class Main {
     }
 
     private static void display(Event event, OutputWriter outputWriter) {
+        outputWriter.writeLine(formatAsDayAndMonth(event.startDate()));
+        outputWriter.writeLine("");
         outputWriter.writeLine(event.name());
         outputWriter.writeLine("");
+    }
+
+    private static String formatAsDayAndMonth(LocalDate startDate) {
+        return startDate.format(DateTimeFormatter.ofPattern("d MMMM"));
     }
 }

@@ -15,14 +15,24 @@ public class SundayChessFinderTests {
 
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
-                        """                                
+                        """
+                         10 May
+                         
                          Muswell Hill FIDE Chess 2024
+                         
+                         12 May
                          
                          London Rapidplay
                          
+                         4 June
+                         
                          June Weekday Chess
                          
+                         9 June
+                         
                          Wembley Sunday Rapidplay
+                         
+                         7 July
                          
                          July Weekend Chess
                          

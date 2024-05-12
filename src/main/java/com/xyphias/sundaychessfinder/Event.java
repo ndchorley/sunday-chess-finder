@@ -1,3 +1,5 @@
 package com.xyphias.sundaychessfinder;
 
-public record Event(String name) {}
+import java.time.LocalDate;
+
+public record Event(String name, LocalDate startDate) {}
