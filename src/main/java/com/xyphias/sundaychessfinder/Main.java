@@ -1,10 +1,6 @@
 package com.xyphias.sundaychessfinder;
 
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.io.SAXReader;
-
-import java.util.List;
+import static com.xyphias.sundaychessfinder.XmlExtractor.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,37 +10,6 @@ public class Main {
     public static void findSundayChessEvents(String calendarFile, OutputWriter outputWriter) {
         extractEventsFrom(calendarFile)
                 .forEach(event -> display(event, outputWriter));
-    }
-
-    private static List<Event> extractEventsFrom(String calendarFile) {
-        return
-                readXml(calendarFile)
-                        .getRootElement()
-                        .element("vcalendar")
-                        .element("components")
-                        .elements("vevent")
-                        .stream()
-                        .map(Main::toEvent)
-                        .toList();
-    }
-
-    private static Document readXml(String calendarFile) {
-        try {
-            return new SAXReader().read(calendarFile);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private static Event toEvent(Element eventElement) {
-        String name =
-                eventElement
-                        .element("properties")
-                        .element("summary")
-                        .element("text")
-                        .getText();
-
-        return new Event(name);
     }
 
     private static void display(Event event, OutputWriter outputWriter) {
