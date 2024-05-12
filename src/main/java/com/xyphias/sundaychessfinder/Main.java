@@ -7,7 +7,9 @@ import static com.xyphias.sundaychessfinder.XmlExtractor.*;
 
 public class Main {
     public static void main(String[] args) {
-        findSundayChessEvents(args[0], System.out::println);
+        String calendarFile = args[0];
+
+        findSundayChessEvents(calendarFile, System.out::println);
     }
 
     public static void findSundayChessEvents(String calendarFile, OutputWriter outputWriter) {
