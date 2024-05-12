@@ -41,6 +41,30 @@ public class XmlExtractor {
         return new Event(name, date, url);
     }
 
+    private static String extractName(Element eventElement) {
+        return eventElement
+                .element("properties")
+                .element("summary")
+                .element("text")
+                .getText();
+    }
+
+    private static LocalDate extractDate(Element eventElement) {
+        String startDateTimeText =
+                eventElement
+                        .element("properties")
+                        .element("dtstart")
+                        .element("date-time")
+                        .getText();
+
+        LocalDate date =
+                LocalDateTime
+                        .parse(startDateTimeText)
+                        .toLocalDate();
+
+        return date;
+    }
+
     private static URL extractURL(Element eventElement) {
         String urlString =
                 eventElement
@@ -60,27 +84,4 @@ public class XmlExtractor {
         }
     }
 
-    private static LocalDate extractDate(Element eventElement) {
-        String startDateTimeText =
-                eventElement
-                        .element("properties")
-                        .element("dtstart")
-                        .element("date-time")
-                        .getText();
-
-        LocalDate date =
-                LocalDateTime
-                        .parse(startDateTimeText)
-                        .toLocalDate();
-
-        return date;
-    }
-
-    private static String extractName(Element eventElement) {
-        return eventElement
-                .element("properties")
-                .element("summary")
-                .element("text")
-                .getText();
-    }
 }
