@@ -3,6 +3,7 @@ package functional.com.xyphias.sundaychessfinder;
 import org.junit.jupiter.api.Test;
 
 import static com.xyphias.sundaychessfinder.Main.findSundayChessEvents;
+import static common.com.xyphias.sundaychessfinder.FilePaths.resourcePathOf;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SundayChessFinderTests {
@@ -56,7 +57,4 @@ public class SundayChessFinderTests {
 
     }
 
-    private String resourcePathOf(String fileName) {
-        return getClass().getClassLoader().getResource(fileName).getPath();
-    }
 }
