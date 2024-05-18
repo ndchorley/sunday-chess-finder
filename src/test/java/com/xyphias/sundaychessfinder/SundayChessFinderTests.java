@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SundayChessFinderTests {
     @Test
-    public void it_displays_all_the_events() {
+    public void it_displays_only_events_on_Sundays() {
         String calendarFile = resourcePathOf("ecf-calendar.xml");
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
 
@@ -16,20 +16,10 @@ public class SundayChessFinderTests {
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
                         """
-                         10 May
-                         
-                         Muswell Hill FIDE Chess 2024
-                         https://muswell-hill-chess.com
-                         
                          12 May
                          
                          London Rapidplay
                          https://london-rapidplay.com
-                         
-                         4 June
-                         
-                         June Weekday Chess
-                         https://june-weekday-chess.com
                          
                          9 June
                          
