@@ -1,4 +1,4 @@
-package com.xyphias.sundaychessfinder;
+package functional.com.xyphias.sundaychessfinder;
 
 import org.junit.jupiter.api.Test;
 

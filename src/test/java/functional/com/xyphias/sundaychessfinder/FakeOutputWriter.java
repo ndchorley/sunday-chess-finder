@@ -1,4 +1,6 @@
-package com.xyphias.sundaychessfinder;
+package functional.com.xyphias.sundaychessfinder;
+
+import com.xyphias.sundaychessfinder.OutputWriter;
 
 public class FakeOutputWriter implements OutputWriter {
     public String written = "";
