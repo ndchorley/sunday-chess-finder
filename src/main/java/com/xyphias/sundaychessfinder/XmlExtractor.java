@@ -66,10 +66,17 @@ public class XmlExtractor {
     }
 
     private static URL extractURL(Element eventElement) {
-        String urlString =
+        Element urlElement =
                 eventElement
                         .element("properties")
-                        .element("url")
+                        .element("url");
+
+        if (urlElement == null) {
+            return null;
+        }
+
+        String urlString =
+                urlElement
                         .element("uri")
                         .getText();
 
