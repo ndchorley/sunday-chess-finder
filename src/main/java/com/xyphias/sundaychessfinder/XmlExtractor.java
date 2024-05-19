@@ -9,9 +9,10 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 public class XmlExtractor {
-    static List<Event> extractEventsFrom(String calendarFile) {
+    public static List<Event> extractEventsFrom(String calendarFile) {
         return
                 readXml(calendarFile)
                         .getRootElement()
@@ -50,19 +51,35 @@ public class XmlExtractor {
     }
 
     private static LocalDate extractDate(Element eventElement) {
-        String startDateTimeText =
+        Element dtStartElement =
                 eventElement
                         .element("properties")
-                        .element("dtstart")
+                        .element("dtstart");
+
+        Optional<LocalDate> date = extractDateFromDateElement(dtStartElement);
+
+        if (date.isPresent()) {
+            return date.get();
+        }
+
+        String startDateTimeText =
+                dtStartElement
                         .element("date-time")
                         .getText();
 
-        LocalDate date =
-                LocalDateTime
-                        .parse(startDateTimeText)
-                        .toLocalDate();
+        return LocalDateTime
+                .parse(startDateTimeText)
+                .toLocalDate();
+    }
 
-        return date;
+    private static Optional<LocalDate> extractDateFromDateElement(Element dtStartElement) {
+        Element dateElement = dtStartElement.element("date");
+
+        if (dateElement == null) {
+            return Optional.empty();
+        }
+
+        return Optional.of(LocalDate.parse(dateElement.getText()));
     }
 
     private static URL extractURL(Element eventElement) {
