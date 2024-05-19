@@ -1,10 +1,9 @@
 package com.xyphias.sundaychessfinder;
 
 import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import static com.xyphias.sundaychessfinder.Displaying.display;
 import static com.xyphias.sundaychessfinder.XmlExtractor.extractEventsFrom;
 
 public class Main {
@@ -26,23 +25,4 @@ public class Main {
                 .toList();
     }
 
-    private static void display(Event event, OutputWriter outputWriter) {
-        outputWriter.writeLine(formatAsDayAndMonth(event.date()));
-        outputWriter.writeLine("");
-        outputWriter.writeLine(event.name());
-        outputWriter.writeLine(urlOrMessageIfMissing(event));
-        outputWriter.writeLine("");
-    }
-
-    private static String urlOrMessageIfMissing(Event event) {
-        if (event.url() != null) {
-            return event.url().toString();
-        } else {
-            return "No URL was provided!";
-        }
-    }
-
-    private static String formatAsDayAndMonth(LocalDate date) {
-        return date.format(DateTimeFormatter.ofPattern("d MMMM"));
-    }
 }
