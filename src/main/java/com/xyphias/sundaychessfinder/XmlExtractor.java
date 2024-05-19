@@ -56,20 +56,10 @@ public class XmlExtractor {
                         .element("properties")
                         .element("dtstart");
 
-        Optional<LocalDate> date = extractDateFromDateElement(dtStartElement);
+        return
+                extractDateFromDateElement(dtStartElement)
+                        .orElseGet(() -> extractDateFromDateTimeElement(dtStartElement));
 
-        if (date.isPresent()) {
-            return date.get();
-        }
-
-        String startDateTimeText =
-                dtStartElement
-                        .element("date-time")
-                        .getText();
-
-        return LocalDateTime
-                .parse(startDateTimeText)
-                .toLocalDate();
     }
 
     private static Optional<LocalDate> extractDateFromDateElement(Element dtStartElement) {
@@ -80,6 +70,17 @@ public class XmlExtractor {
         }
 
         return Optional.of(LocalDate.parse(dateElement.getText()));
+    }
+
+    private static LocalDate extractDateFromDateTimeElement(Element dtStartElement) {
+        String startDateTimeText =
+                dtStartElement
+                        .element("date-time")
+                        .getText();
+
+        return LocalDateTime
+                .parse(startDateTimeText)
+                .toLocalDate();
     }
 
     private static URL extractURL(Element eventElement) {
