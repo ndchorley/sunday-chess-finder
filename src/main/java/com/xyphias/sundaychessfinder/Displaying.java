@@ -1,5 +1,6 @@
 package com.xyphias.sundaychessfinder;
 
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -8,13 +9,13 @@ public class Displaying {
         outputWriter.writeLine(formatAsDayAndMonth(event.date()));
         outputWriter.writeLine("");
         outputWriter.writeLine(event.name());
-        outputWriter.writeLine(urlOrMessageIfMissing(event));
+        outputWriter.writeLine(urlOrMessageIfMissing(event.url()));
         outputWriter.writeLine("");
     }
 
-    private static String urlOrMessageIfMissing(Event event) {
-        if (event.url() != null) {
-            return event.url().toString();
+    private static String urlOrMessageIfMissing(URL url) {
+        if (url != null) {
+            return url.toString();
         } else {
             return "No URL was provided!";
         }
