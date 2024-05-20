@@ -13,15 +13,14 @@ public class Displaying {
         outputWriter.writeLine("");
     }
 
+    private static String formatAsDayAndMonth(LocalDate date) {
+        return date.format(DateTimeFormatter.ofPattern("d MMMM"));
+    }
     private static String urlOrMessageIfMissing(URL url) {
         if (url != null) {
             return url.toString();
         } else {
             return "No URL was provided!";
         }
-    }
-
-    private static String formatAsDayAndMonth(LocalDate date) {
-        return date.format(DateTimeFormatter.ofPattern("d MMMM"));
     }
 }
