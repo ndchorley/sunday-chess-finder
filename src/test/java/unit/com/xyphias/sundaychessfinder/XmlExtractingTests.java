@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static com.xyphias.sundaychessfinder.XmlExtractor.extractEventsFrom;
+import static com.xyphias.sundaychessfinder.XmlExtracting.extractEventsFrom;
 import static common.com.xyphias.sundaychessfinder.FilePaths.resourcePathOf;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class XmlExtractorTests {
+public class XmlExtractingTests {
     @Test
     public void it_extracts_the_date_from_a_date_element() {
         String calendarFile = resourcePathOf("ecf-calendar-date-element.xml");

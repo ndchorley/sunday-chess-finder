@@ -4,7 +4,7 @@ import java.time.DayOfWeek;
 import java.util.List;
 
 import static com.xyphias.sundaychessfinder.Displaying.display;
-import static com.xyphias.sundaychessfinder.XmlExtractor.extractEventsFrom;
+import static com.xyphias.sundaychessfinder.XmlExtracting.extractEventsFrom;
 
 public class Finding {
     public static void findSundayChessEvents(String calendarFile, OutputWriter outputWriter) {

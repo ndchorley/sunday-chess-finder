@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-public class XmlExtractor {
+public class XmlExtracting {
     public static List<Event> extractEventsFrom(String calendarFile) {
         return
                 readXml(calendarFile)
@@ -20,7 +20,7 @@ public class XmlExtractor {
                         .element("components")
                         .elements("vevent")
                         .stream()
-                        .map(XmlExtractor::toEvent)
+                        .map(XmlExtracting::toEvent)
                         .toList();
     }
 
