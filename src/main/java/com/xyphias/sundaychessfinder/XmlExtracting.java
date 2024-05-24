@@ -64,9 +64,7 @@ public class XmlExtracting {
     private static Optional<LocalDate> extractDateFromDateElement(Element dtStartElement) {
         Element dateElement = dtStartElement.element("date");
 
-        if (dateElement == null) {
-            return Optional.empty();
-        }
+        if (dateElement == null) return Optional.empty();
 
         return Optional.of(LocalDate.parse(dateElement.getText()));
     }
@@ -88,9 +86,7 @@ public class XmlExtracting {
                         .element("properties")
                         .element("url");
 
-        if (urlElement == null) {
-            return null;
-        }
+        if (urlElement == null) return null;
 
         String urlString =
                 urlElement
