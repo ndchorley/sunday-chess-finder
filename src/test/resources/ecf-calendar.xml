@@ -78,10 +78,10 @@
             <vevent>
                 <properties>
                     <summary>
-                        <text>Muswell Hill FIDE Chess 2024</text>
+                        <text>July Weekend Chess</text>
                     </summary>
                     <dtstart>
-                        <date-time>2024-05-10T10:30:00</date-time>
+                        <date-time>2024-07-07T10:30:00</date-time>
                     </dtstart>
                     <categories>
                         <parameters>
@@ -92,7 +92,7 @@
                         <text>ECF Rated,FIDE Rated,Disability Friendly</text>
                     </categories>
                     <url>
-                        <uri>https://muswell-hill-chess.com</uri>
+                        <uri>https://july-weekend-chess.co.uk</uri>
                     </url>
                     <x-tags>
                         <parameters>
@@ -165,6 +165,35 @@
             <vevent>
                 <properties>
                     <summary>
+                        <text>Muswell Hill FIDE Chess 2024</text>
+                    </summary>
+                    <dtstart>
+                        <date-time>2024-05-10T10:30:00</date-time>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <url>
+                        <uri>https://muswell-hill-chess.com</uri>
+                    </url>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+            <vevent>
+                <properties>
+                    <summary>
                         <text>Wembley Sunday Rapidplay</text>
                     </summary>
                     <dtstart>
@@ -180,35 +209,6 @@
                     </categories>
                     <url>
                         <uri>https://wembley-sunday-rapidplay.co.uk</uri>
-                    </url>
-                    <x-tags>
-                        <parameters>
-                            <language>
-                                <text>en-US</text>
-                            </language>
-                        </parameters>
-                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
-                    </x-tags>
-                </properties>
-            </vevent>
-            <vevent>
-                <properties>
-                    <summary>
-                        <text>July Weekend Chess</text>
-                    </summary>
-                    <dtstart>
-                        <date-time>2024-07-07T10:30:00</date-time>
-                    </dtstart>
-                    <categories>
-                        <parameters>
-                            <language>
-                                <text>en-US</text>
-                            </language>
-                        </parameters>
-                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
-                    </categories>
-                    <url>
-                        <uri>https://july-weekend-chess.co.uk</uri>
                     </url>
                     <x-tags>
                         <parameters>

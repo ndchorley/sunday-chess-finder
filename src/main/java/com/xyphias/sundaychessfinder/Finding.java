@@ -1,6 +1,7 @@
 package com.xyphias.sundaychessfinder;
 
 import java.time.DayOfWeek;
+import java.util.Comparator;
 import java.util.List;
 
 import static com.xyphias.sundaychessfinder.Displaying.display;
@@ -10,7 +11,9 @@ public class Finding {
     public static void findSundayChessEvents(String calendarFile, OutputWriter outputWriter) {
         List<Event> allEvents = extractEventsFrom(calendarFile);
 
-        onlyEventsOnSunday(allEvents).forEach(event -> display(event, outputWriter));
+        onlyEventsOnSunday(allEvents).stream()
+                .sorted(Comparator.comparing(Event::date))
+                .forEach(event -> display(event, outputWriter));
     }
 
     private static List<Event> onlyEventsOnSunday(List<Event> allEvents) {
