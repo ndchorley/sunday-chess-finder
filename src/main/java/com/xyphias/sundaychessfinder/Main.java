@@ -7,7 +7,8 @@ import static com.xyphias.sundaychessfinder.Finding.findSundayChessEvents;
 public class Main {
     public static void main(String[] args) {
         String calendarFile = args[0];
+        LocalDate today = LocalDate.now();
 
-        findSundayChessEvents(calendarFile, System.out::println, LocalDate.now());
+        findSundayChessEvents(calendarFile, today, System.out::println);
     }
 }

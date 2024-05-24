@@ -9,7 +9,7 @@ import static com.xyphias.sundaychessfinder.Displaying.display;
 import static com.xyphias.sundaychessfinder.XmlExtracting.extractEventsFrom;
 
 public class Finding {
-    public static void findSundayChessEvents(String calendarFile, OutputWriter outputWriter, LocalDate today) {
+    public static void findSundayChessEvents(String calendarFile, LocalDate today, OutputWriter outputWriter) {
         List<Event> allEvents = extractEventsFrom(calendarFile);
 
         onlyEventsOnSunday(allEvents).stream()

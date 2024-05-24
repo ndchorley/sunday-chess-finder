@@ -16,7 +16,7 @@ public class SundayChessFinderTests {
         String calendarFile = resourcePathOf("ecf-calendar.xml");
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
 
-        findSundayChessEvents(calendarFile, fakeOutputWriter, today);
+        findSundayChessEvents(calendarFile, today, fakeOutputWriter);
 
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
@@ -41,7 +41,7 @@ public class SundayChessFinderTests {
         String calendarFile = resourcePathOf("ecf-calendar-no-url.xml");
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
 
-        findSundayChessEvents(calendarFile, fakeOutputWriter, today);
+        findSundayChessEvents(calendarFile, today, fakeOutputWriter);
 
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
