@@ -34,11 +34,8 @@ public class XmlExtracting {
 
     private static Event toEvent(Element eventElement) {
         String name = extractName(eventElement);
-
         LocalDate date = extractDate(eventElement);
-
         URL url = extractURL(eventElement);
-
         boolean isJunior = extractIsJunior(eventElement);
 
         return new Event(name, date, url, isJunior);
