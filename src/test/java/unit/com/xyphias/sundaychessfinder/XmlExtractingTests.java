@@ -18,4 +18,13 @@ public class XmlExtractingTests {
 
         assertThat(event.date()).isEqualTo(LocalDate.of(2024, 8, 18));
     }
+
+    @Test
+    public void an_event_without_categories_is_not_treated_as_a_junior_one() {
+        String calendarFile = resourcePathOf("ecf-calendar-no-categories.xml");
+
+        Event event = extractEventsFrom(calendarFile).getFirst();
+
+        assertThat(event.isJunior()).isEqualTo(false);
+    }
 }

@@ -109,10 +109,15 @@ public class XmlExtracting {
     }
 
     private static boolean extractIsJunior(Element eventElement) {
-        String categories =
+        Element categoriesElement =
                 eventElement
                         .element("properties")
-                        .element("categories")
+                        .element("categories");
+
+        if (categoriesElement == null) return false;
+
+        String categories =
+                categoriesElement
                         .element("text")
                         .getText();
 
