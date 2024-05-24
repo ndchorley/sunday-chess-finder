@@ -2,26 +2,25 @@ package functional.com.xyphias.sundaychessfinder;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static com.xyphias.sundaychessfinder.Finding.findSundayChessEvents;
 import static common.com.xyphias.sundaychessfinder.FilePaths.resourcePathOf;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SundayChessFinderTests {
+    private final LocalDate today = LocalDate.of(2024, 6, 1);
+
     @Test
-    public void it_displays_only_events_on_Sundays() {
+    public void it_displays_only_future_events_on_Sundays() {
         String calendarFile = resourcePathOf("ecf-calendar.xml");
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
 
-        findSundayChessEvents(calendarFile, fakeOutputWriter);
+        findSundayChessEvents(calendarFile, fakeOutputWriter, today);
 
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
                         """
-                         12 May
-                         
-                         London Rapidplay
-                         https://london-rapidplay.com
-                         
                          9 June
                          
                          Wembley Sunday Rapidplay
@@ -42,7 +41,7 @@ public class SundayChessFinderTests {
         String calendarFile = resourcePathOf("ecf-calendar-no-url.xml");
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
 
-        findSundayChessEvents(calendarFile, fakeOutputWriter);
+        findSundayChessEvents(calendarFile, fakeOutputWriter, today);
 
         assertThat(fakeOutputWriter.written)
                 .isEqualTo(
@@ -56,5 +55,4 @@ public class SundayChessFinderTests {
                 );
 
     }
-
 }
