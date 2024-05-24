@@ -15,6 +15,7 @@ public class Finding {
         onlyEventsOnSunday(allEvents).stream()
                 .sorted(Comparator.comparing(Event::date))
                 .filter(event -> event.date().isAfter(today))
+                .filter(event -> !event.isJunior())
                 .forEach(event -> display(event, outputWriter));
     }
 

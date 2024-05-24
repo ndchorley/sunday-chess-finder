@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<icalendar
+        xmlns="urn:ietf:params:xml:ns:icalendar-2.0"><!-- created 20240511T092753Z using kigkonsult.se iCalcreator 2.26.9 iCal2XMl (rfc6321) -->
+    <vcalendar>
+        <components>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>London Rapidplay</text>
+                    </summary>
+                    <dtstart>
+                        <date>2024-08-18</date>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly</text>
+                    </categories>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+            <vevent>
+                <properties>
+                    <summary>
+                        <text>Junior Rapidplay</text>
+                    </summary>
+                    <dtstart>
+                        <date>2024-06-16</date>
+                    </dtstart>
+                    <categories>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <text>ECF Rated,FIDE Rated,Disability Friendly,Juniors Only</text>
+                    </categories>
+                    <x-tags>
+                        <parameters>
+                            <language>
+                                <text>en-US</text>
+                            </language>
+                        </parameters>
+                        <unknown>South East,London,Rapidplay,Standardplay</unknown>
+                    </x-tags>
+                </properties>
+            </vevent>
+
+        </components>
+    </vcalendar>
+</icalendar>

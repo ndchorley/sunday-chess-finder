@@ -39,7 +39,9 @@ public class XmlExtracting {
 
         URL url = extractURL(eventElement);
 
-        return new Event(name, date, url);
+        boolean isJunior = extractIsJunior(eventElement);
+
+        return new Event(name, date, url, isJunior);
     }
 
     private static String extractName(Element eventElement) {
@@ -109,4 +111,14 @@ public class XmlExtracting {
         }
     }
 
+    private static boolean extractIsJunior(Element eventElement) {
+        String categories =
+                eventElement
+                        .element("properties")
+                        .element("categories")
+                        .element("text")
+                        .getText();
+
+        return categories.contains("Juniors Only");
+    }
 }

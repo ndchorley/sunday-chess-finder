@@ -37,6 +37,16 @@ public class SundayChessFinderTests {
     }
 
     @Test
+    public void it_excludes_junior_events() {
+        String calendarFile = resourcePathOf("ecf-calendar-with-junior-event.xml");
+        FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
+
+        findSundayChessEvents(calendarFile, today, fakeOutputWriter);
+
+        assertThat(fakeOutputWriter.written).doesNotContain("Junior Rapidplay");
+    }
+
+    @Test
     public void it_displays_a_message_if_an_event_has_no_URL() {
         String calendarFile = resourcePathOf("ecf-calendar-no-url.xml");
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
@@ -53,6 +63,5 @@ public class SundayChessFinderTests {
                          
                          """
                 );
-
     }
 }
