@@ -64,4 +64,19 @@ public class SundayChessFinderTests {
                          """
                 );
     }
+
+    @Test
+    public void it_complains_if_the_file_cant_be_found() {
+        String calendarFile = "does-not-exist.xml";
+        FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
+
+        findSundayChessEvents(calendarFile, today, fakeOutputWriter);
+
+        assertThat(fakeOutputWriter.written)
+                .isEqualTo(
+                        """
+                                Could not find calendar at does-not-exist.xml
+                                """
+                );
+    }
 }
