@@ -5,6 +5,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static com.xyphias.sundaychessfinder.Displaying.display;
 import static com.xyphias.sundaychessfinder.XmlExtracting.extractEventsFrom;
@@ -18,7 +19,7 @@ public class Finding {
 
         List<Event> allEvents = extractEventsFrom(calendarFile);
 
-        onlyEventsOnSunday(allEvents).stream()
+        onlyEventsOnSunday(allEvents)
                 .sorted(byDate)
                 .filter(event -> event.date().isAfter(today))
                 .filter(event -> !event.isJunior())
@@ -31,10 +32,9 @@ public class Finding {
         return !file.exists();
     }
 
-    private static List<Event> onlyEventsOnSunday(List<Event> allEvents) {
+    private static Stream<Event> onlyEventsOnSunday(List<Event> allEvents) {
         return allEvents.stream()
-                .filter(event -> event.date().getDayOfWeek() == DayOfWeek.SUNDAY)
-                .toList();
+                .filter(event -> event.date().getDayOfWeek() == DayOfWeek.SUNDAY);
     }
 
     private static Comparator<Event> byDate = Comparator.comparing(Event::date);
