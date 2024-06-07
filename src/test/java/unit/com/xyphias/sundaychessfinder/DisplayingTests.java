@@ -1,7 +1,7 @@
 package unit.com.xyphias.sundaychessfinder;
 
 import com.xyphias.sundaychessfinder.Event;
-import functional.com.xyphias.sundaychessfinder.FakeOutputWriter;
+import common.com.xyphias.sundaychessfinder.FakeOutputWriter;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

@@ -1,5 +1,6 @@
 package functional.com.xyphias.sundaychessfinder;
 
+import common.com.xyphias.sundaychessfinder.FakeOutputWriter;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

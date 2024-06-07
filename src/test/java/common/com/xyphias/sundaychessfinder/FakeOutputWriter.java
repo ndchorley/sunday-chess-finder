@@ -1,4 +1,4 @@
-package functional.com.xyphias.sundaychessfinder;
+package common.com.xyphias.sundaychessfinder;
 
 import com.xyphias.sundaychessfinder.OutputWriter;
 
