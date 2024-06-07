@@ -19,7 +19,7 @@ public class Finding {
         List<Event> allEvents = extractEventsFrom(calendarFile);
 
         onlyEventsOnSunday(allEvents).stream()
-                .sorted(Comparator.comparing(Event::date))
+                .sorted(byDate)
                 .filter(event -> event.date().isAfter(today))
                 .filter(event -> !event.isJunior())
                 .forEach(event -> display(event, outputWriter));
@@ -36,4 +36,6 @@ public class Finding {
                 .filter(event -> event.date().getDayOfWeek() == DayOfWeek.SUNDAY)
                 .toList();
     }
+
+    private static Comparator<Event> byDate = Comparator.comparing(Event::date);
 }
