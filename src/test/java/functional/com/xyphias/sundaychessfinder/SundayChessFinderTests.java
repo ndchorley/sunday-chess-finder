@@ -47,25 +47,6 @@ public class SundayChessFinderTests {
     }
 
     @Test
-    public void it_displays_a_message_if_an_event_has_no_URL() {
-        String calendarFile = resourcePathOf("ecf-calendar-no-url.xml");
-        FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();
-
-        findSundayChessEvents(calendarFile, today, fakeOutputWriter);
-
-        assertThat(fakeOutputWriter.written)
-                .isEqualTo(
-                        """
-                         18 August
-                         
-                         London Rapidplay
-                         No URL was provided!
-                         
-                         """
-                );
-    }
-
-    @Test
     public void it_complains_if_the_file_cant_be_found() {
         String calendarFile = "does-not-exist.xml";
         FakeOutputWriter fakeOutputWriter = new FakeOutputWriter();

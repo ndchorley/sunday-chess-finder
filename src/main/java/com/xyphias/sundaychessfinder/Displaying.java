@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Displaying {
-    static void display(Event event, OutputWriter outputWriter) {
+    public static void display(Event event, OutputWriter outputWriter) {
         outputWriter.writeLine(formatAsDayAndMonth(event.date()));
         outputWriter.writeLine("");
         outputWriter.writeLine(event.name());
