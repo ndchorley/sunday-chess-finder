@@ -1,12 +1,12 @@
 package unit.com.xyphias.sundaychessfinder;
 
-import com.xyphias.sundaychessfinder.Displaying;
 import com.xyphias.sundaychessfinder.Event;
 import functional.com.xyphias.sundaychessfinder.FakeOutputWriter;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
+import static com.xyphias.sundaychessfinder.Displaying.display;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DisplayingTests {
@@ -22,7 +22,7 @@ public class DisplayingTests {
 
         FakeOutputWriter outputWriter = new FakeOutputWriter();
 
-        Displaying.display(event, outputWriter);
+        display(event, outputWriter);
 
         assertThat(outputWriter.written).endsWith("No URL was provided!\n\n");
     }
