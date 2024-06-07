@@ -16,6 +16,7 @@ public class Displaying {
     private static String formatAsDayAndMonth(LocalDate date) {
         return date.format(DateTimeFormatter.ofPattern("d MMMM"));
     }
+
     private static String urlOrMessageIfMissing(URL url) {
         if (url != null) {
             return url.toString();
